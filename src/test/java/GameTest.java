@@ -20,8 +20,11 @@ public class GameTest {
 
     @Test
     public void gutterGame() {
-        for(int i = 0; i < 20; i++)
-            game.roll(0);
+        int rolls = 20;
+        int pins = 0;
+        for(int i = 0; i < rolls; i++) {
+            game.roll(pins);
+        }
         assertThat(game.score(), is(0));
     }
 
