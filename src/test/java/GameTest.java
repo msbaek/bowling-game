@@ -60,4 +60,10 @@ public class GameTest {
     private void rollStrike() {
         game.roll(10);
     }
+
+    @Test
+    public void perfectGame() {
+        rollMany(12, 10);
+        assertThat(game.score(), is(300));
+    }
 }
