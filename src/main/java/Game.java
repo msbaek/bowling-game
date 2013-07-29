@@ -10,7 +10,7 @@ public class Game {
         int score = 0;
         int firstFrame = 0;
         for(int frame = 0; frame < 10; frame++) {
-            if(isSpare(firstFrame)) { // spare
+            if(isSpare(firstFrame)) {
                 score += 10 + rolls[firstFrame + 2];
                 firstFrame += 2;
             }
