@@ -13,6 +13,11 @@ public class GameTest {
         game = new Game();
     }
 
+    private void rollMany(int rolls, int pins) {
+        for(int i = 0; i < rolls; i++)
+            game.roll(pins);
+    }
+
     @Test
     public void canRoll() {
         game.roll(0);
@@ -20,15 +25,8 @@ public class GameTest {
 
     @Test
     public void gutterGame() {
-        int rolls = 20;
-        int pins = 0;
-        rollMany(rolls, pins);
+        rollMany(20, 0);
         assertThat(game.score(), is(0));
-    }
-
-    private void rollMany(int rolls, int pins) {
-        for(int i = 0; i < rolls; i++)
-            game.roll(pins);
     }
 
     @Test
