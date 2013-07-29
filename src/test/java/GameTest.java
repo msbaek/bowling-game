@@ -11,10 +11,6 @@ public class GameTest {
     }
 
     @Test
-    public void canCreateGame() {
-    }
-
-    @Test
     public void canRoll() {
         game.roll(0);
     }
