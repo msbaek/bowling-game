@@ -22,16 +22,18 @@ public class GameTest {
     public void gutterGame() {
         int rolls = 20;
         int pins = 0;
-        for(int i = 0; i < rolls; i++) {
-            game.roll(pins);
-        }
+        rollMany(rolls, pins);
         assertThat(game.score(), is(0));
+    }
+
+    private void rollMany(int rolls, int pins) {
+        for(int i = 0; i < rolls; i++)
+            game.roll(pins);
     }
 
     @Test
     public void allOnes() {
-        for(int i = 0; i < 20; i++)
-            game.roll(1);
+        rollMany(20, 1);
         assertThat(game.score(), is(20));
     }
 }
