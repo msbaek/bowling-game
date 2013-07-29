@@ -2,6 +2,7 @@ import org.junit.Test;
 
 public class GameTest {
     @Test
-    public void foo() {
+    public void canCreateGame() {
+        Game g = new Game();
     }
 }
