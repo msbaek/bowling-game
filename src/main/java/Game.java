@@ -11,19 +11,31 @@ public class Game {
         int firstFrame = 0;
         for(int frame = 0; frame < 10; frame++) {
             if(isStrike(firstFrame)) {
-                score += 10 + rolls[firstFrame + 1] + rolls[firstFrame + 2];
+                score += 10 + nextTwoBallsForStrike(firstFrame);
                 firstFrame += 1;
             }
             else if(isSpare(firstFrame)) {
-                score += 10 + rolls[firstFrame + 2];
+                score += 10 + nextBallForSpare(firstFrame);
                 firstFrame += 2;
             }
             else {
-                score += rolls[firstFrame] + rolls[firstFrame + 1];
+                score += nextBallsInFrame(firstFrame);
                 firstFrame += 2;
             }
         }
         return score;
+    }
+
+    private int nextBallsInFrame(int firstFrame) {
+        return rolls[firstFrame] + rolls[firstFrame + 1];
+    }
+
+    private int nextBallForSpare(int firstFrame) {
+        return rolls[firstFrame + 2];
+    }
+
+    private int nextTwoBallsForStrike(int firstFrame) {
+        return rolls[firstFrame + 1] + rolls[firstFrame + 2];
     }
 
     private boolean isStrike(int firstFrame) {
