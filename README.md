@@ -1,3 +1,83 @@
+
+# 0. 개요
+
+이 프로젝트에서는 밥아저씨를 비롯한 많은 사람들이 10여간 TDD를 설명하기 위한 예제로 사용한 Bowling Game을 TDD로 구현하는 것을 설명하고,
+TDD에 대한 반발과 이에 대한 답변에 대해 알아본다.
+
+## Bowling Game Demo
+
+![](images/bowling-rule.png)
+
+* 규칙
+	* 볼링 게임은 10개의 프레임으로 구성된다.
+	* 각 프레임은 대개 2 롤을 갖는다(10개의 핀을 쓰러 뜨리기 위해 2번의 기회를 갖는다).
+	* Spare: 10 + next first roll에서 쓰러 뜨린 핀수.
+	* Strike: 10 + next two rolls에서 쓰러 뜨린 핀수.
+	* 10th 프레임은 특별. spare 처리하면 3번 던질 수 있음.
+
+## 이 예제의 목적
+
+Game이라는 클래스를 생성하는 것이 이 예제의 목적이다.
+
+![](images/game.png)
+
+* Game 클래스는
+	* roll과 score라는 2개의 메소드를 갖는다.
+	* roll 메소드는 ball을 roll할 때마다 호출된다. 인자로는 쓰러뜨린 핀수를 갖는다.
+	* score 메소드는 게임이 끝난 후에만 호출되어 게임의 점수를 반환한다.
+
+## 간단한 설계 과정
+
+![](images/game-frame.png)
+
+* 게임은 10개의 프레임을 갖는다.
+	* Game은 roll, score 함수를 갖는다.
+	* Game은 10개의 Frame을 갖는다.
+
+![](images/game-frame-roll.png)
+
+* Frame은 1..2개의 Roll을 갖는다.
+	* 10번 프레임은 예외를 갖는다(1..2 roll을 갖는 것이 아니라 2..3 roll을 갖는다).
+	* 객체지향에서 이런 예외를 어떻게 표현하나 ???
+
+![](images/tenth-frame.png)
+
+** score 함수의 알고리즘
+
+frame수만큼 loop를 돌면서 각 frame의 점수를 합산할 것이다.
+
+![](images/score1.png)
+
+frame은 roll수 만큼 loop를 돌면서 점수를 계산할 것이다. strike, spare를 위해서 look ahead roll을 해야 한다.
+
+![](images/score2.png)
+
+## 자 이제 설계가 있다. 이제 TDD를 할 차례
+
+TDD에서 이상한 일을 한다. 설계를 무시하는 것이다. 완전히 무시하는 것은 아니고 따르지 않는 것이다. 단지 가이드 라인의 일정으로 사용한다.
+
+```
+public class BowlingTest {
+  @Test
+  public void nothing() {
+  }
+}
+```
+
+* **아무것도 없는 nothing이라는 테스트로 시작**. 이것도 실행해 본다. 밥 아저씨는 **항상 뭔가 실행되는 것으로 시작**한다고 한다. 그래서 **심지어 의미 있는 코드가 하나도 없더라도 실행되는 뭔가를 가지고 있다**.
+* 그리곤 지운다. 아마 테스트 작성을 위한 설정이 제대로 되었는지 확인하는가보다. 나중에 알았지만 항상 동작하는 코드로 작업하기 위해서이다. 이게 **개발자들에게는 편안함을 준다**.
+* 무슨 테스트를 작성해야 하나 ?
+	* failing unit test가 있기 전에는 production code를 작성하면 안된다.
+	* 하지만 이미 개발자는 어떤 production code를 작성해야 하는지 안다. public class Game을 작성해야 한다는 것을 ...
+	* 그러나 우리는 public class Game을 작성하도록 허가 받지 않았다. 우리는 유닛 테스트를 먼저 작성해야 한다.
+* **어떤 테스트를 작성해야 내가 원하는 코드를 작성하게 될까 ?**
+	* 어떤 failing test를 작성해야 Game.java에 public class Game을 선언하게 될까 ?
+* 이제부터 red-green-refactor cycle로 들어가자.
+	* red phase: next most interesting case but still really simple
+	* green phase: make it pass
+	* blue phase: refactor
+* 가장 쉽고(간단하고) 흥미로운(easy/simple and interesting) 테스트부터 작성
+
 # 1. canCreateGame
 
 ## 1.1 add failing test

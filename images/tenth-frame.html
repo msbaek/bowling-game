@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>
+        study:clean-coders-codecasts:todd2-fig-6.png        [wiki]
+    </title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="index,follow"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/~msbaek/wiki/lib/exe/opensearch.php" title="wiki"/>
+<link rel="start" href="/~msbaek/wiki/"/>
+<link rel="contents" href="/~msbaek/wiki/doku.php?id=study:clean-coders-codecasts:06.tdd_part_ii&amp;do=index" title="사이트맵"/>
+<link rel="alternate" type="application/rss+xml" title="최근 바뀜" href="/~msbaek/wiki/feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="현재 이름공간" href="/~msbaek/wiki/feed.php?mode=list&amp;ns="/>
+<link rel="alternate" type="text/html" title="일반 HTML" href="/~msbaek/wiki/doku.php?do=export_xhtml&amp;id=study:clean-coders-codecasts:06.tdd_part_ii"/>
+<link rel="alternate" type="text/plain" title="위키 문법" href="/~msbaek/wiki/doku.php?do=export_raw&amp;id=study:clean-coders-codecasts:06.tdd_part_ii"/>
+<link rel="stylesheet" type="text/css" href="/~msbaek/wiki/lib/exe/css.php?t=dokuwiki&amp;tseed=0ba78a432a6e6733efa706c4804fb3d4"/>
+<script type="text/javascript">/*<![CDATA[*/var NS='';var JSINFO = null;
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="/~msbaek/wiki/lib/exe/js.php?t=dokuwiki&amp;tseed=0ba78a432a6e6733efa706c4804fb3d4"></script>
+<script type="text/javascript" charset="utf-8" src="/~msbaek/wiki/lib/plugins/codeprettify/google-code-prettify/run_prettify.js?lang=css"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="/~msbaek/wiki/lib/tpl/dokuwiki/images/favicon.ico" />
+<link rel="apple-touch-icon" href="/~msbaek/wiki/lib/tpl/dokuwiki/images/apple-touch-icon.png" />
+    </head>
+
+<body>
+    <!--[if lte IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_ tpl_dokuwiki   ">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+    
+    <div class="headings group">
+        <ul class="a11y skip">
+            <li><a href="#dokuwiki__content">내용으로 건너뛰기</a></li>
+        </ul>
+
+        <h1><a href="/~msbaek/wiki/doku.php?id=start"  accesskey="h" title="[H]"><img src="/~msbaek/wiki/lib/tpl/dokuwiki/images/logo.png" width="64" height="64" alt="" /> <span>wiki</span></a></h1>
+            </div>
+
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">사용자 도구</h3>
+                <ul>
+                    <li><a href="/~msbaek/wiki/doku.php?id=study:clean-coders-codecasts:06.tdd_part_ii&amp;do=login&amp;sectok=40d19f3cfedecfad2606e5269374137b"  class="action login" rel="nofollow" title="로그인">로그인</a></li>                </ul>
+            </div>
+        
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">사이트 도구</h3>
+            <form action="/~msbaek/wiki/doku.php?id=start" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" placeholder="검색" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><button type="submit" title="검색">검색</button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>            <div class="mobileTools">
+                <form action="/~msbaek/wiki/doku.php" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="study:clean-coders-codecasts:06.tdd_part_ii" /><select name="do" class="edit quickselect" title="도구"><option value="">도구</option><optgroup label="문서 도구"><option value="">문서 보기</option><option value="revisions">이전 판</option><option value="backlink">역링크</option></optgroup><optgroup label="사이트 도구"><option value="recent">최근 바뀜</option><option value="media">미디어 관리자</option><option value="index">사이트맵</option></optgroup><optgroup label="사용자 도구"><option value="login">로그인</option></optgroup></select><button type="submit">&gt;</button></div></form>            </div>
+            <ul>
+                <li><a href="/~msbaek/wiki/doku.php?id=study:clean-coders-codecasts:06.tdd_part_ii&amp;do=recent"  class="action recent" accesskey="r" rel="nofollow" title="최근 바뀜 [R]">최근 바뀜</a></li><li><a href="/~msbaek/wiki/doku.php?id=study:clean-coders-codecasts:06.tdd_part_ii&amp;do=media&amp;ns=study%3Aclean-coders-codecasts"  class="action media" rel="nofollow" title="미디어 관리자">미디어 관리자</a></li><li><a href="/~msbaek/wiki/doku.php?id=study:clean-coders-codecasts:06.tdd_part_ii&amp;do=index"  class="action index" accesskey="x" rel="nofollow" title="사이트맵 [X]">사이트맵</a></li>            </ul>
+        </div>
+
+    </div>
+
+    <!-- BREADCRUMBS -->
+            <div class="breadcrumbs">
+                                        <div class="trace"><span class="bchead">추적:</span> <span class="bcsep">•</span> <bdi><a href="/~msbaek/wiki/doku.php?id=study:clean-coders-codecasts"  class="breadcrumbs" title="study:clean-coders-codecasts">clean-coders-codecasts</a></bdi> <span class="bcsep">•</span> <span class="curid"><bdi><a href="/~msbaek/wiki/doku.php?id=study:clean-coders-codecasts:06.tdd_part_ii"  class="breadcrumbs" title="study:clean-coders-codecasts:06.tdd_part_ii">06.tdd_part_ii</a></bdi></span></div>
+                    </div>
+    
+
+
+    <hr class="a11y" />
+</div></div><!-- /header -->
+
+        <div class="wrapper group" id="dokuwiki__detail">
+
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+                
+                                    <div class="pageId"><span>study:clean-coders-codecasts:todd2-fig-6.png</span></div>
+                
+                <div class="page group">
+                                                            <!-- detail start -->
+                                                                    <h1>todd2-fig-6.png</h1>
+
+                        <a href="/~msbaek/wiki/lib/exe/fetch.php?cache=&amp;media=study:clean-coders-codecasts:todd2-fig-6.png" title="원본 파일 보기"><img width="673" height="265" class="img_detail" alt="todd2-fig-6.png" title="todd2-fig-6.png" src="/~msbaek/wiki/lib/exe/fetch.php?cache=&amp;w=673&amp;h=265&amp;tok=740185&amp;media=study:clean-coders-codecasts:todd2-fig-6.png"/></a>
+                        <div class="img_detail">
+                            <dl><dt>날짜:</dt><dd>2011/12/01 02:11</dd><dt>파일 이름:</dt><dd>todd2-fig-6.png</dd><dt>포맷:</dt><dd>PNG</dd><dt>크기:</dt><dd>32KB</dd><dt>너비:</dt><dd>673</dd><dt>높이:</dt><dd>265</dd></dl>                            <dl>
+                            <dt>다음을 참조:</dt><dd><span class="curid"><a href="/~msbaek/wiki/doku.php?id=study:clean-coders-codecasts:06.tdd_part_ii" class="wikilink1" title="study:clean-coders-codecasts:06.tdd_part_ii">06.tdd_part_ii</a></span></dd>                            </dl>
+                            <p>이 목록은 ACL로 제한되어 있고 숨겨진 문서이기 때문에 완전하지 않을 수 있습니다.</p>
+                        </div>
+                                                            </div>
+                <!-- detail stop -->
+                                
+                
+            </div></div><!-- /content -->
+
+            <hr class="a11y" />
+
+            <!-- PAGE ACTIONS -->
+                            <div id="dokuwiki__pagetools">
+                    <h3 class="a11y">문서 도구</h3>
+                    <div class="tools">
+                        <ul>
+                            <li><a href="/~msbaek/wiki/doku.php?id=study:clean-coders-codecasts:06.tdd_part_ii&amp;ns=study%3Aclean-coders-codecasts&amp;image=study%3Aclean-coders-codecasts%3Atodd2-fig-6.png&amp;do=media"  class="action mediaManager" rel="nofollow" title="미디어 관리자에서 보기"><span>미디어 관리자에서 보기</span></a></li><li><a href="/~msbaek/wiki/doku.php?id=study:clean-coders-codecasts:06.tdd_part_ii"  class="action img_backto" accesskey="b" rel="nofollow" title="%s(으)로 돌아가기 [B]"><span>%s(으)로 돌아가기</span></a></li>                        </ul>
+                    </div>
+                </div>
+                    </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    <div class="license">별도로 명시하지 않을 경우, 이 위키의 내용은 다음 라이선스에 따라 사용할 수 있습니다: <bdi><a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license" class="urlextern">CC Attribution-Share Alike 3.0 Unported</a></bdi></div>
+    <div class="buttons">
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="/~msbaek/wiki/lib/images/license/button/cc-by-sa.png" alt="CC Attribution-Share Alike 3.0 Unported" /></a>        <a href="http://www.dokuwiki.org/donate" title="Donate" ><img
+            src="/~msbaek/wiki/lib/tpl/dokuwiki/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+        <a href="http://www.php.net" title="Powered by PHP" ><img
+            src="/~msbaek/wiki/lib/tpl/dokuwiki/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5" ><img
+            src="/~msbaek/wiki/lib/tpl/dokuwiki/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS" ><img
+            src="/~msbaek/wiki/lib/tpl/dokuwiki/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki" ><img
+            src="/~msbaek/wiki/lib/tpl/dokuwiki/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+    </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <!--[if lte IE 8 ]></div><![endif]-->
+</body>
+</html>
